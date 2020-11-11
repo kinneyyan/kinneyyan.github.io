@@ -6,7 +6,7 @@
   <link href="https://kinneyyan.github.io/atom.xml" rel="self"/>
   
   <link href="https://kinneyyan.github.io/"/>
-  <updated>2020-11-10T05:23:40.938Z</updated>
+  <updated>2020-11-11T03:33:22.633Z</updated>
   <id>https://kinneyyan.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux下ZeroTier的安装和使用</title>
+    <link href="https://kinneyyan.github.io/2020-11-11/Linux%E4%B8%8BZeroTier%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
+    <id>https://kinneyyan.github.io/2020-11-11/Linux%E4%B8%8BZeroTier%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-11-11T03:24:22.000Z</published>
+    <updated>2020-11-11T03:33:22.633Z</updated>
+    
+    <content type="html"><![CDATA[<p>官网流程请戳：<a href="https://www.zerotier.com/download">https://www.zerotier.com/download</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://install.zerotier.com | sudo bash</span><br></pre></td></tr></table></figure><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动</span></span><br><span class="line">zerotier-one -d</span><br><span class="line"><span class="meta">#</span><span class="bash"> 获取地址和服务状态</span></span><br><span class="line">zerotier-cli status</span><br><span class="line"><span class="meta">#</span><span class="bash"> 加入、离开、列出网络</span></span><br><span class="line">zerotier-cli join &lt;Network ID&gt;</span><br><span class="line">zerotier-cli leave &lt;Network ID&gt;</span><br><span class="line">zerotier-cli listnetworks</span><br></pre></td></tr></table></figure><h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start zerotier-one.service</span><br><span class="line">sudo systemctl enable zerotier-one.service</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在树莓派上</span></span><br><span class="line">sudo vi /etc/rc.local</span><br><span class="line"><span class="meta">#</span><span class="bash"> 在 <span class="built_in">exit</span> 0 所在行之前前添加代码</span></span><br><span class="line">zerotier-one -d</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;官网流程请戳：&lt;a href=&quot;https://www.zerotier.com/download&quot;&gt;https://www.zerotier.com/download&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://kinneyyan.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://kinneyyan.github.io/tags/Linux/"/>
+    
+    <category term="内网穿透" scheme="https://kinneyyan.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>低成本搭建私有云（老毛子+KodExplorer）</title>
     <link href="https://kinneyyan.github.io/2020-11-10/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E8%80%81%E6%AF%9B%E5%AD%90+KodExplorer%EF%BC%89/"/>
     <id>https://kinneyyan.github.io/2020-11-10/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E8%80%81%E6%AF%9B%E5%AD%90+KodExplorer%EF%BC%89/</id>
     <published>2020-11-10T06:00:00.000Z</published>
-    <updated>2020-11-10T05:23:40.938Z</updated>
+    <updated>2020-11-11T03:30:31.309Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原本准备给家里购置一台 NAS，然后上网研究了下，发现无论是群晖还是威联通，想要买一台自己满意的 NAS（4 盘位、x86 CPU），价格基本都是 2000 上下，有点小贵……后来在网上搜索之余发现有通过路由器配合 <code>KodExplorer</code> 搭建私有云的教程，想起来家里正在用的新路由 3 支持，随即开始搭（cai）建（keng）之旅。当然最后是搭建成功了，但是有必要在这里记录一下关键步骤和坑点。</p><p>期间也考虑到了内网穿透问题，最后采用了免费易上手的 <code>ZeroTier</code>。</p><h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><ol><li>刷了老毛子（Padavan）固件的路由器（关于路由器能否/如何刷老毛子，本文不做介绍，因为我的新路由 3 是买来就刷好的。tb 搜索‘路由器 老毛子’即可）</li><li>一块 2T 的西数红盘</li></ol><p><em>所有成本就是路由器+硬盘+硬盘盒的价格，总共 700 出头</em></p><h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h3 id="1-格式化硬盘"><a href="#1-格式化硬盘" class="headerlink" title="1. 格式化硬盘"></a>1. 格式化硬盘</h3><p>将硬盘连接到新路由 3 的 USB 口后，打开路由器控制台，按下图操作：</p><p><a href="https://imgchr.com/i/Bhk9kF"><img src="https://s1.ax1x.com/2020/11/06/Bhk9kF.png" alt="Bhk9kF.png"></a></p><p>这里我遇到的问题是：虽然通过控制台这么操作了，但是实际上硬盘并没有格式化成 EXT4（从控制台 Log 中看出来），从而导致后续安装过程出错。所以最后我是通过 ssh 到路由器，通过命令行将硬盘格式化为 ext4 的。参考：<a href="https://www.jianshu.com/p/f96ca9cb89da">linux 命令行格式化 ext4</a>。</p><h3 id="2-USB-应用程序设置（可选）"><a href="#2-USB-应用程序设置（可选）" class="headerlink" title="2. USB 应用程序设置（可选）"></a>2. USB 应用程序设置（可选）</h3><p>这一步可选，主要是针对硬盘的一些配置：</p><p><a href="https://imgchr.com/i/BhEuzd"><img src="https://s1.ax1x.com/2020/11/06/BhEuzd.png" alt="BhEuzd.png"></a></p><p>参考：<a href="http://www.duomingxing.com/jiaocheng/padavan/71.php">Padavan 老毛子 U 盘硬盘共享一些细节参数设置</a></p><h3 id="3-将-opt-安装模式改为‘安装到-U-盘’"><a href="#3-将-opt-安装模式改为‘安装到-U-盘’" class="headerlink" title="3. 将 opt 安装模式改为‘安装到 U 盘’"></a>3. 将 opt 安装模式改为‘安装到 U 盘’</h3><p><a href="https://imgchr.com/i/BhVZmq"><img src="https://s1.ax1x.com/2020/11/06/BhVZmq.png" alt="BhVZmq.png"></a></p><p>根据上图改好后，点击最下方‘应用本页面设置‘，页面刷新后，再点击’重置 opt 文件‘，随后观察日志、等待。直到’当前 opt 文件’有显示正确的版本号就说明成功了。</p><h3 id="4-开启-LNMP"><a href="#4-开启-LNMP" class="headerlink" title="4. 开启 LNMP"></a>4. 开启 LNMP</h3><p><a href="https://imgchr.com/i/BhZTRe"><img src="https://s1.ax1x.com/2020/11/06/BhZTRe.png" alt="BhZTRe.png"></a></p><p>根据上图操作后，耐心等待（一定要耐心），观察日志同时红线处显示了版本号就说明安装成功了。</p><p>安装成功之后就要开始安装 KodExplorer 了，这里我没有马上打开老毛子控制台上 KodExplorer 的开关，原因有 2 个：1. 开启后，路由器会执行 lnmp 中的脚本 wget 下载 zip 包，这一步很可能因为网络原因速度很慢下载不下来；2. lnmp 脚本中指定的 KodExplorer 的 zip 包并不是最新的版本。</p><h3 id="5-下载-安装-KodExplorer"><a href="#5-下载-安装-KodExplorer" class="headerlink" title="5. 下载/安装 KodExplorer"></a>5. 下载/安装 KodExplorer</h3><p>KodExplorer 是一个国内团队开发的基于 Web 技术的私有云在线文档管理解决方案。个人用户也可以通过搭建 KodExplorer 实现自己的一套私有云。</p><p>首先我去官网下载 KodeExplorer 的<a href="http://static.kodcloud.com/update/download/kodexplorer4.40.zip">最新版本的 zip 包</a></p><p>然后通过 scp（scp 命令参考我博客中的<a href="https://kinneyyan.github.io/2019-04-08/SSH%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">SSH 常用命令</a>）将 zip 包传到路由器的 <code>/opt</code> 路径下，再 ssh 到路由器，将 zip 解压到 <code>/opt/wwwroot/Kodexplorer</code>（通常解压下来还有一层目录，要将那一层目录下的文件放到此目录下）。</p><p>操作完成后，再去老毛子控制台：</p><p><a href="https://imgchr.com/i/Bhm2Ax"><img src="https://s1.ax1x.com/2020/11/06/Bhm2Ax.png" alt="Bhm2Ax.png"></a></p><p>点击下方‘应用本页面设置’后，观察日志你会发现，lnmp 脚本发现我们已经有解压好的 KodeExplorer 了，就不执行下载转而进行后续配置了。</p><p>观察日志提示成功后，我们就可以访问 <code>路由器IP地址:88</code> ，首次访问创建账号密码后，就可以进入 KodExplorer 的页面啦：</p><p><a href="https://imgchr.com/i/BqSoKH"><img src="https://s1.ax1x.com/2020/11/10/BqSoKH.png" alt="BqSoKH.png"></a></p><p><a href="https://imgchr.com/i/BhnXZR"><img src="https://s1.ax1x.com/2020/11/06/BhnXZR.png" alt="BhnXZR.png"></a></p><h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p>这里列下当初我考虑的几种方案：</p><ul><li><p>公网 IP+DDNS+端口转发（家里没有公网 IP，放弃）</p><blockquote><p><a href="https://sspai.com/post/60303">家里搭建了 NAS 需要远程访问？这几个步骤很重要</a></p></blockquote></li><li><p>ddnsto（老毛子自带，配置方便，但只能通过 web 端访问并需要微信登录）</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/79778358">0 成本搭建个人私有云</a></p></blockquote></li><li><p>ZeroTier（配置方便，但需要连接的两端安装客户端，最后采用此方案）</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/73552123">老毛子 Padavan 路由器安装 ZeroTier</a> &gt; <a href="https://zhih.me/zerotier-getting-started">ZeroTier 内网穿透教程</a></p></blockquote></li><li><p><a href="https://natapp.cn/">NATAPP</a>（一款基于 ngrok 的内网穿透服务，有免费有付费。表哥推荐，后续准备试用下）</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原本准备给家里购置一台 NAS，然后上网研究了下，发现无论是群晖还是威联通，想要买一台自己满意的 NAS（4 盘位、x86 CPU），价格基本都是 2000 上下，有点小贵……后来在网上搜索之余发现有通过路由器配合 <code>KodExplorer</code> 搭建私有云的教程，想起来家里正在用的新路由 3 支持，随即开始搭（cai）建（keng）之旅。当然最后是搭建成功了，但是有必要在这里记录一下关键步骤和坑点。</p><p>期间也考虑到了内网穿透问题，最后采用了免费易上手的 <code>ZeroTier</code>。</p><h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><ol><li>刷了老毛子（Padavan）固件的路由器（关于路由器能否/如何刷老毛子，本文不做介绍，因为我的新路由 3 是买来就刷好的。tb 搜索‘路由器 老毛子’即可）</li><li>一块 2T 的西数红盘</li></ol><p><em>所有成本就是路由器+硬盘+硬盘盒的价格，总共 700 出头</em></p><h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h3 id="1-格式化硬盘"><a href="#1-格式化硬盘" class="headerlink" title="1. 格式化硬盘"></a>1. 格式化硬盘</h3><p>将硬盘连接到新路由 3 的 USB 口后，打开路由器控制台，按下图操作：</p><p><a href="https://imgchr.com/i/Bhk9kF"><img src="https://s1.ax1x.com/2020/11/06/Bhk9kF.png" alt="Bhk9kF.png"></a></p><p>这里我遇到的问题是：虽然通过控制台这么操作了，但是实际上硬盘并没有格式化成 EXT4（从控制台 Log 中看出来），从而导致后续安装过程出错。所以最后我是通过 ssh 到路由器，通过命令行将硬盘格式化为 ext4 的。参考：<a href="https://www.jianshu.com/p/f96ca9cb89da">linux 命令行格式化 ext4</a>。</p><h3 id="2-USB-应用程序设置（可选）"><a href="#2-USB-应用程序设置（可选）" class="headerlink" title="2. USB 应用程序设置（可选）"></a>2. USB 应用程序设置（可选）</h3><p>这一步可选，主要是针对硬盘的一些配置：</p><p><a href="https://imgchr.com/i/BhEuzd"><img src="https://s1.ax1x.com/2020/11/06/BhEuzd.png" alt="BhEuzd.png"></a></p><p>参考：<a href="http://www.duomingxing.com/jiaocheng/padavan/71.php">Padavan 老毛子 U 盘硬盘共享一些细节参数设置</a></p><h3 id="3-将-opt-安装模式改为‘安装到-U-盘’"><a href="#3-将-opt-安装模式改为‘安装到-U-盘’" class="headerlink" title="3. 将 opt 安装模式改为‘安装到 U 盘’"></a>3. 将 opt 安装模式改为‘安装到 U 盘’</h3><p><a href="https://imgchr.com/i/BhVZmq"><img src="https://s1.ax1x.com/2020/11/06/BhVZmq.png" alt="BhVZmq.png"></a></p><p>根据上图改好后，点击最下方‘应用本页面设置‘，页面刷新后，再点击’重置 opt 文件‘，随后观察日志、等待。直到’当前 opt 文件’有显示正确的版本号就说明成功了。</p><h3 id="4-开启-LNMP"><a href="#4-开启-LNMP" class="headerlink" title="4. 开启 LNMP"></a>4. 开启 LNMP</h3><p><a href="https://imgchr.com/i/BhZTRe"><img src="https://s1.ax1x.com/2020/11/06/BhZTRe.png" alt="BhZTRe.png"></a></p><p>根据上图操作后，耐心等待（一定要耐心），观察日志同时红线处显示了版本号就说明安装成功了。</p><p>安装成功之后就要开始安装 KodExplorer 了，这里我没有马上打开老毛子控制台上 KodExplorer 的开关，原因有 2 个：1. 开启后，路由器会执行 lnmp 中的脚本 wget 下载 zip 包，这一步很可能因为网络原因速度很慢下载不下来；2. lnmp 脚本中指定的 KodExplorer 的 zip 包并不是最新的版本。</p><h3 id="5-下载-安装-KodExplorer"><a href="#5-下载-安装-KodExplorer" class="headerlink" title="5. 下载/安装 KodExplorer"></a>5. 下载/安装 KodExplorer</h3><p>KodExplorer 是一个国内团队开发的基于 Web 技术的私有云在线文档管理解决方案。个人用户也可以通过搭建 KodExplorer 实现自己的一套私有云。</p><p>首先我去官网下载 KodeExplorer 的<a href="http://static.kodcloud.com/update/download/kodexplorer4.40.zip">最新版本的 zip 包</a></p><p>然后通过 scp（scp 命令参考我博客中的<a href="https://kinneyyan.github.io/2019-04-08/SSH%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">SSH 常用命令</a>）将 zip 包传到路由器的 <code>/opt</code> 路径下，再 ssh 到路由器，将 zip 解压到 <code>/opt/wwwroot/Kodexplorer</code>（通常解压下来还有一层目录，要将那一层目录下的文件放到此目录下）。</p><p>操作完成后，再去老毛子控制台：</p><p><a href="https://imgchr.com/i/Bhm2Ax"><img src="https://s1.ax1x.com/2020/11/06/Bhm2Ax.png" alt="Bhm2Ax.png"></a></p><p>点击下方‘应用本页面设置’后，观察日志你会发现，lnmp 脚本发现我们已经有解压好的 KodeExplorer 了，就不执行下载转而进行后续配置了。</p><p>观察日志提示成功后，我们就可以访问 <code>路由器IP地址:88</code> ，首次访问创建账号密码后，就可以进入 KodExplorer 的页面啦：</p><p><a href="https://imgchr.com/i/BqSoKH"><img src="https://s1.ax1x.com/2020/11/10/BqSoKH.png" alt="BqSoKH.png"></a></p><p><a href="https://imgchr.com/i/BhnXZR"><img src="https://s1.ax1x.com/2020/11/06/BhnXZR.png" alt="BhnXZR.png"></a></p><h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p>这里列下当初我考虑的几种方案：</p><ul><li><p>公网 IP+DDNS+端口转发（家里没有公网 IP，放弃）：<a href="https://sspai.com/post/60303">家里搭建了 NAS 需要远程访问？这几个步骤很重要</a></p></li><li><p>ddnsto（老毛子自带，配置方便，但只能通过 web 端访问并需要微信登录）：<a href="https://zhuanlan.zhihu.com/p/79778358">0 成本搭建个人私有云</a></p></li><li><p>ZeroTier（配置方便，但需要连接的两端安装客户端，最后采用此方案）：<a href="https://zhuanlan.zhihu.com/p/73552123">老毛子 Padavan 路由器安装 ZeroTier</a>、<a href="https://zhih.me/zerotier-getting-started">ZeroTier 内网穿透教程</a></p></li><li><p><a href="https://natapp.cn/">NATAPP</a>（一款基于 ngrok 的内网穿透服务，有免费有付费。表哥推荐，后续准备试用下）</p></li></ul>]]></content>
     
     
       
@@ -491,31 +518,6 @@
     <category term="Java" scheme="https://kinneyyan.github.io/tags/Java/"/>
     
     <category term="Android" scheme="https://kinneyyan.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux中如何将中文目录名改成英文</title>
-    <link href="https://kinneyyan.github.io/2016-07-23/Linux%E4%B8%AD%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AD%E6%96%87%E7%9B%AE%E5%BD%95%E5%90%8D%E6%94%B9%E6%88%90%E8%8B%B1%E6%96%87/"/>
-    <id>https://kinneyyan.github.io/2016-07-23/Linux%E4%B8%AD%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AD%E6%96%87%E7%9B%AE%E5%BD%95%E5%90%8D%E6%94%B9%E6%88%90%E8%8B%B1%E6%96%87/</id>
-    <published>2016-07-23T08:47:37.000Z</published>
-    <updated>2020-11-10T03:22:15.947Z</updated>
-    
-    <content type="html"><![CDATA[<p>为了使用起来方便，装了ubuntu中文版，自然在home文件里用户目录的“桌面”、“图片”、“视频”、“音乐”……都是中文的。</p><p>很多时候都喜欢在桌面上放一些要操作的文件，linux里命令行操作又多，难免会用命令行操作桌面上的东西，那么就要 “cd  桌面”，打“桌面”的时候要输入法切换，麻烦……所以就想办法把用户目录下的路径改成英文，而其他的中文不变，方法如下：</p><p>打开终端，在终端中输入命令:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export LANG=en_US</span><br><span class="line">xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure><p>跳出对话框询问是否将目录转化为英文路径,同意并关闭.<br>在终端中输入命令:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LANG=zh_CN</span><br></pre></td></tr></table></figure><p>关闭终端，账号登出或重启，系统会提示是否把转化好的目录改回中文。选择不再提示，并取消修改。主目录的中文转英文就完成了~</p><hr><blockquote><p>参考自：<a href="http://www.cnblogs.com/belinda/p/4056042.html">http://www.cnblogs.com/belinda/p/4056042.html</a></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;为了使用起来方便，装了ubuntu中文版，自然在home文件里用户目录的“桌面”、“图片”、“视频”、“音乐”……都是中文的。&lt;/p&gt;
-&lt;p&gt;很多时候都喜欢在桌面上放一些要操作的文件，linux里命令行操作又多，难免会用命令行操作桌面上的东西，那么就要 “cd  桌面”，打</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="https://kinneyyan.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Linux" scheme="https://kinneyyan.github.io/tags/Linux/"/>
     
   </entry>
   
