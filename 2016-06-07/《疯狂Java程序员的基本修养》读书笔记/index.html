@@ -1,0 +1,436 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="a personal blog by Kinney Yan"><title>《疯狂Java程序员的基本修养》读书笔记 | Kinney's blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" href="/atom.xml"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《疯狂Java程序员的基本修养》读书笔记</h1><a id="logo" href="/.">Kinney's blog</a><p class="description">stay hungry, stay foolish</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/read/"><i class="fa fa-book"> 读书</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《疯狂Java程序员的基本修养》读书笔记</h1><div class="post-meta">2016-06-07<span> | </span><span class="category"><a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="post-content"><p><em>去年读的电子版写的读书笔记兼目录，放出来温习一下</em>😊</p>
+<h2 id="第-1-章-数组及其内存管理"><a href="#第-1-章-数组及其内存管理" class="headerlink" title="第 1 章 数组及其内存管理"></a>第 1 章 数组及其内存管理</h2><h3 id="1-1-数组初始化-p11"><a href="#1-1-数组初始化-p11" class="headerlink" title="1.1 数组初始化 p11"></a>1.1 数组初始化 p11</h3><h4 id="1-1-1-Java-数组是静态的-p11"><a href="#1-1-1-Java-数组是静态的-p11" class="headerlink" title="1.1.1 Java 数组是静态的 p11"></a>1.1.1 Java 数组是静态的 p11</h4><ul>
+<li><p>数组静态初始化、动态初始化的 sample p11</p>
+</li>
+<li><p>Java 数组是静态的，一旦数组初始化完成，数组元素的内存空间分配即结束，程序只能改变数组元素的值，而无法改变数组的长度。</p>
+</li>
+<li><p>数组变量也是一种引用类型的变量，指向堆内存的数组对象。</p>
+</li>
+<li><p>JS 的数组可动态改变。</p>
+</li>
+</ul>
+<h4 id="1-1-2-数组一定要初始化吗-p14"><a href="#1-1-2-数组一定要初始化吗-p14" class="headerlink" title="1.1.2 数组一定要初始化吗 p14"></a>1.1.2 数组一定要初始化吗 p14</h4><ul>
+<li>只要让数组变量指向有效的数组对象即可。</li>
+</ul>
+<h4 id="1-1-3-基本类型数组的初始化-p16"><a href="#1-1-3-基本类型数组的初始化-p16" class="headerlink" title="1.1.3 基本类型数组的初始化 p16"></a>1.1.3 基本类型数组的初始化 p16</h4><ul>
+<li>引用变量本质上只是一个指针，只要程序通过引用变量访问属性，或者通过引用变量来调用方法，该引用变量就会由它所引用的对象代替。</li>
+</ul>
+<h4 id="1-1-4-引用类型数组的初始化-p18"><a href="#1-1-4-引用类型数组的初始化-p18" class="headerlink" title="1.1.4 引用类型数组的初始化 p18"></a>1.1.4 引用类型数组的初始化 p18</h4><ul>
+<li>sample p18</li>
+</ul>
+<h3 id="1-2-使用数组-p21"><a href="#1-2-使用数组-p21" class="headerlink" title="1.2 使用数组 p21"></a>1.2 使用数组 p21</h3><h4 id="1-2-1-数组元素就是变量-p21"><a href="#1-2-1-数组元素就是变量-p21" class="headerlink" title="1.2.1 数组元素就是变量 p21"></a>1.2.1 数组元素就是变量 p21</h4><h4 id="1-2-2-没有多维数组-p23"><a href="#1-2-2-没有多维数组-p23" class="headerlink" title="1.2.2 没有多维数组 p23"></a>1.2.2 没有多维数组 p23</h4><h2 id="第-2-章-对象及其内存管理"><a href="#第-2-章-对象及其内存管理" class="headerlink" title="第 2 章 对象及其内存管理"></a>第 2 章 对象及其内存管理</h2><ul>
+<li><p>Java 内存管理分为两个方面：内存分配和内存回收。</p>
+</li>
+<li><p>内存分配指创建 Java 对象时 JVM 为该对象在堆内存中所分配的内存空间；</p>
+</li>
+<li><p>内存回收指当该 Java 对象失去引用变成垃圾时，JVM 的 GC 自动清理该对象，并回收该对象所占用的内存。</p>
+</li>
+</ul>
+<h3 id="2-1-实例变量（非静态变量）和类变量（静态变量）-p31"><a href="#2-1-实例变量（非静态变量）和类变量（静态变量）-p31" class="headerlink" title="2.1 实例变量（非静态变量）和类变量（静态变量） p31"></a>2.1 实例变量（非静态变量）和类变量（静态变量） p31</h3><h4 id="2-1-1-实例变量和类变量的属性-p32"><a href="#2-1-1-实例变量和类变量的属性-p32" class="headerlink" title="2.1.1 实例变量和类变量的属性 p32"></a>2.1.1 实例变量和类变量的属性 p32</h4><ul>
+<li><p>在同一个 JVM 内，每个类只对应一个 Class 对象。因此同一个 JVM 内的一个类的类变量只需一块内存空间；但实例变量有几个就需要几块内存空间。</p>
+</li>
+<li><p>sample p33</p>
+</li>
+</ul>
+<h4 id="2-1-2-实例变量的初始化时机-p35"><a href="#2-1-2-实例变量的初始化时机-p35" class="headerlink" title="2.1.2 实例变量的初始化时机 p35"></a>2.1.2 实例变量的初始化时机 p35</h4><ul>
+<li><p>非静态初始化块总是在构造器执行之前获得执行。</p>
+</li>
+<li><p>JDK 提供的 javap 工具，主要用于帮助开发者深入了解 Java 编译器的机制。 用法见 p38</p>
+</li>
+</ul>
+<h4 id="2-1-3-类变量的初始化时机-p39"><a href="#2-1-3-类变量的初始化时机-p39" class="headerlink" title="2.1.3 类变量的初始化时机 p39"></a>2.1.3 类变量的初始化时机 p39</h4><ul>
+<li>sample p39</li>
+</ul>
+<h3 id="2-2-父类构造器-p41"><a href="#2-2-父类构造器-p41" class="headerlink" title="2.2 父类构造器 p41"></a>2.2 父类构造器 p41</h3><h4 id="2-2-1-隐式调用和显式调用-p41"><a href="#2-2-1-隐式调用和显式调用-p41" class="headerlink" title="2.2.1 隐式调用和显式调用 p41"></a>2.2.1 隐式调用和显式调用 p41</h4><ul>
+<li>Java 对象时的初始化过程 sample p41</li>
+</ul>
+<h4 id="2-2-2-访问子类对象的实例变量-p43"><a href="#2-2-2-访问子类对象的实例变量-p43" class="headerlink" title="2.2.2 访问子类对象的实例变量 p43"></a>2.2.2 访问子类对象的实例变量 p43</h4><ul>
+<li>构造器只是负责对 Java 对象实例变量执行初始化（也就是赋初始值），在执行构造器代码之前，该对象所占的内存已经被分配出来了。</li>
+</ul>
+<h4 id="2-2-3-调用被子类重写的方法-p46"><a href="#2-2-3-调用被子类重写的方法-p46" class="headerlink" title="2.2.3 调用被子类重写的方法 p46"></a>2.2.3 调用被子类重写的方法 p46</h4><ul>
+<li>sample p46</li>
+</ul>
+<h3 id="2-3-父子实例的内存控制-p48"><a href="#2-3-父子实例的内存控制-p48" class="headerlink" title="2.3 父子实例的内存控制 p48"></a>2.3 父子实例的内存控制 p48</h3><h4 id="2-3-1-继承成员变量和继承方法的区别-p48"><a href="#2-3-1-继承成员变量和继承方法的区别-p48" class="headerlink" title="2.3.1 继承成员变量和继承方法的区别 p48"></a>2.3.1 继承成员变量和继承方法的区别 p48</h4><ul>
+<li>对于一个引用类型的变量而言，当通过该变量访问它所引用的对象的实例变量时，该实例变量的值取决于声明该变量时的类型；当通过该变量来调用它所引用的对象的方法时，该方法行为取决于它所实际引用的对象的类型。</li>
+</ul>
+<h4 id="2-3-2-内存中子类实例-p51"><a href="#2-3-2-内存中子类实例-p51" class="headerlink" title="2.3.2 内存中子类实例 p51"></a>2.3.2 内存中子类实例 p51</h4><ul>
+<li>当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为其父类中定义的所有实例变量分配内存，即使子类定义了与父类同名的实例变量。</li>
+</ul>
+<h4 id="2-3-3-父、子类的类变量-p56"><a href="#2-3-3-父、子类的类变量-p56" class="headerlink" title="2.3.3 父、子类的类变量 p56"></a>2.3.3 父、子类的类变量 p56</h4><h3 id="2-4-final-修饰符-p57"><a href="#2-4-final-修饰符-p57" class="headerlink" title="2.4 final 修饰符 p57"></a>2.4 final 修饰符 p57</h3><h4 id="2-4-1-final-修饰的变量-p57"><a href="#2-4-1-final-修饰的变量-p57" class="headerlink" title="2.4.1 final 修饰的变量 p57"></a>2.4.1 final 修饰的变量 p57</h4><ul>
+<li><p>三个地方对 final 实例变量进行初始化 sample p58</p>
+</li>
+<li><p>对于一个使用 final 修饰的变量而言，如果定义该 final 变量时就指定初始值，而且这个初始值可以在编译时就确定下来，那么这个 final 变量将不再是一个变量，系统会将其当成“宏变量”处理。</p>
+</li>
+</ul>
+<h4 id="2-4-2-执行“宏替换”的变量-p62"><a href="#2-4-2-执行“宏替换”的变量-p62" class="headerlink" title="2.4.2 执行“宏替换”的变量 p62"></a>2.4.2 执行“宏替换”的变量 p62</h4><ul>
+<li>对于 final 实例变量而言，只有在定义该变量指定初始值才会有“宏变量”的效果。</li>
+</ul>
+<h4 id="2-4-3-final-方法不能被重写-p66"><a href="#2-4-3-final-方法不能被重写-p66" class="headerlink" title="2.4.3 final 方法不能被重写 p66"></a>2.4.3 final 方法不能被重写 p66</h4><h4 id="2-4-4-内部类中的局部变量-p68"><a href="#2-4-4-内部类中的局部变量-p68" class="headerlink" title="2.4.4 内部类中的局部变量 p68"></a>2.4.4 内部类中的局部变量 p68</h4><ul>
+<li>Java 编译器要求被内部类访问的局部变量必须使用 final 修饰符修饰。</li>
+</ul>
+<h2 id="第-3-章-常见-Java-集合的实现细节-p72"><a href="#第-3-章-常见-Java-集合的实现细节-p72" class="headerlink" title="第 3 章 常见 Java 集合的实现细节 p72"></a>第 3 章 常见 Java 集合的实现细节 p72</h2><h3 id="3-1-Set-和-Map-p73"><a href="#3-1-Set-和-Map-p73" class="headerlink" title="3.1 Set 和 Map p73"></a>3.1 Set 和 Map p73</h3><ul>
+<li>可以说，Map 集合是 Set 集合的扩展。</li>
+</ul>
+<h4 id="3-1-1-Set-和-Map-的关系-p73"><a href="#3-1-1-Set-和-Map-的关系-p73" class="headerlink" title="3.1.1 Set 和 Map 的关系 p73"></a>3.1.1 Set 和 Map 的关系 p73</h4><ul>
+<li>Map 集合的所有 key 都具有 Set 集合的特征。</li>
+</ul>
+<h4 id="3-1-2-HashMap-和-HashSet-p78"><a href="#3-1-2-HashMap-和-HashSet-p78" class="headerlink" title="3.1.2 HashMap 和 HashSet p78"></a>3.1.2 HashMap 和 HashSet p78</h4><ul>
+<li><p>Java 集合实际上是多个引用变量所组成的集合，这些引用变量指向实际的 Java 对象。</p>
+</li>
+<li><p>通常来说，HashMap 的实际容量总比 initialCapacity 大一些，除非指定的 initialCapacity 参数值恰好是 2 的 n 次方。所以在创建 HashMap 时将 initialCapacity 参数值指定为 2 的 n 次方，这样可以减少系统的计算开销。</p>
+</li>
+<li><p>HashMap 在底层将 key-value 对当成一个整体进行处理，这个整体就是一个 Entry 对象。</p>
+</li>
+<li><p>HashSet 只是封装了一个 HashMap 对象来存储所有的集合元素。所有放入 HashSet 中的集合元素实际上由 HashMap 的 key 来保存，而 HashMap 的 value 则存储了一个 PRESENT，它是一个静态的 Object 对象。</p>
+</li>
+<li><p>测试掌握 HashMap 和 HashSet 集合的功能 sample p86</p>
+</li>
+</ul>
+<h4 id="3-1-3-TreeMap-和-TreeSet-p88"><a href="#3-1-3-TreeMap-和-TreeSet-p88" class="headerlink" title="3.1.3 TreeMap 和 TreeSet p88"></a>3.1.3 TreeMap 和 TreeSet p88</h4><ul>
+<li><p>TreeSet 底层实际使用的存储容器就是 TreeMap。</p>
+</li>
+<li><p>TreeMap 采用一种“红黑树”的排序二叉树来保存 Map 中的每个 Entry——每个 Entry 都被当成红黑树的一个节点来对待。</p>
+</li>
+<li><p>TreeMap 中所有的 key 总是由小到大排列。</p>
+</li>
+</ul>
+<h3 id="3-2-Map-和-List-p94"><a href="#3-2-Map-和-List-p94" class="headerlink" title="3.2 Map 和 List p94"></a>3.2 Map 和 List p94</h3><h4 id="3-2-1-Map-的-values-方法-p94"><a href="#3-2-1-Map-的-values-方法-p94" class="headerlink" title="3.2.1 Map 的 values()方法 p94"></a>3.2.1 Map 的 values()方法 p94</h4><ul>
+<li>Map 的 values 方法并未返回一个 List 集合。返回的都是内部类的 Values 对象。</li>
+</ul>
+<h4 id="3-2-2-Map-和-List-的关系-p100"><a href="#3-2-2-Map-和-List-的关系-p100" class="headerlink" title="3.2.2 Map 和 List 的关系 p100"></a>3.2.2 Map 和 List 的关系 p100</h4><ul>
+<li><p>JavaScript 的对象有点类似于 Java 的 Map 的结构，也是由多个 key-value 对组成的。</p>
+</li>
+<li><p>JS 的 sample p101</p>
+</li>
+</ul>
+<h3 id="3-3-ArrayList-和-LinkedList-p101"><a href="#3-3-ArrayList-和-LinkedList-p101" class="headerlink" title="3.3 ArrayList 和 LinkedList p101"></a>3.3 ArrayList 和 LinkedList p101</h3><ul>
+<li><p>List 集合主要有三个实现类：ArrayList、Vector、LinkedList</p>
+</li>
+<li><p>程序中如果需要栈这种数据结构，推荐使用 Deque 实现类。从 JDK1.6 开始，Java 提供了一个 Deque 接口，并为该接口提供了一个 ArrayDeque 实现类。在无须线程安全的情况下，程序完全可以使用 ArrayDeque 来代替 Stack 类。</p>
+</li>
+<li><p>Deque 接口代表双端队列这种数据结构，双端队列既是队列也是栈。</p>
+</li>
+</ul>
+<h4 id="3-3-1-Vector-和-ArrayList-的区别-p103"><a href="#3-3-1-Vector-和-ArrayList-的区别-p103" class="headerlink" title="3.3.1 Vector 和 ArrayList 的区别 p103"></a>3.3.1 Vector 和 ArrayList 的区别 p103</h4><ul>
+<li><p>Vector 其实就是 ArrayList 的线程安全版本。</p>
+</li>
+<li><p>Vector 基本上已经被 ArrayList 所代替。</p>
+</li>
+</ul>
+<h4 id="3-3-2-ArrayList-和-LinkedList-的实现差异-p106"><a href="#3-3-2-ArrayList-和-LinkedList-的实现差异-p106" class="headerlink" title="3.3.2 ArrayList 和 LinkedList 的实现差异 p106"></a>3.3.2 ArrayList 和 LinkedList 的实现差异 p106</h4><ul>
+<li><p>LinkedList 本质上就是一个双向链表，但它不仅实现了 List 接口，还实现了 Deque 接口。</p>
+</li>
+<li><p>ArrayList、LinkedList 的一些源码。p106</p>
+</li>
+</ul>
+<h4 id="3-3-3-ArrayList-和-LinkedList-的性能分析及适用场景-p110"><a href="#3-3-3-ArrayList-和-LinkedList-的性能分析及适用场景-p110" class="headerlink" title="3.3.3 ArrayList 和 LinkedList 的性能分析及适用场景 p110"></a>3.3.3 ArrayList 和 LinkedList 的性能分析及适用场景 p110</h4><h3 id="3-4-Iterator-迭代器-p110"><a href="#3-4-Iterator-迭代器-p110" class="headerlink" title="3.4 Iterator 迭代器 p110"></a>3.4 Iterator 迭代器 p110</h3><h4 id="3-4-1-Iterator-实现类与迭代器模式-p111"><a href="#3-4-1-Iterator-实现类与迭代器模式-p111" class="headerlink" title="3.4.1 Iterator 实现类与迭代器模式 p111"></a>3.4.1 Iterator 实现类与迭代器模式 p111</h4><ul>
+<li>对于 Iterator 迭代器而言，它只是一个接口。Java 要求各种集合都提供一个 Iterator()方法，该方法可以返回一个 Iterator 用于遍历该集合中的元素，至于返回的 Iterator 到底是哪种实现类，程序并不关心，这就是典型的“<strong>迭代器模式</strong>”。</li>
+</ul>
+<h4 id="3-4-2-迭代时删除指定元素-p112"><a href="#3-4-2-迭代时删除指定元素-p112" class="headerlink" title="3.4.2 迭代时删除指定元素 p112"></a>3.4.2 迭代时删除指定元素 p112</h4><h2 id="第-4-章-Java-的内存回收-p116"><a href="#第-4-章-Java-的内存回收-p116" class="headerlink" title="第 4 章 Java 的内存回收 p116"></a>第 4 章 Java 的内存回收 p116</h2><h3 id="4-1-Java-引用的种类-p117"><a href="#4-1-Java-引用的种类-p117" class="headerlink" title="4.1 Java 引用的种类 p117"></a>4.1 Java 引用的种类 p117</h3><ul>
+<li>Java 内存管理包括内存分配和内存回收两个方面。</li>
+</ul>
+<h4 id="4-1-1-对象在内存中的状态-p117"><a href="#4-1-1-对象在内存中的状态-p117" class="headerlink" title="4.1.1 对象在内存中的状态 p117"></a>4.1.1 对象在内存中的状态 p117</h4><ul>
+<li><p>对象的三种状态：可达状态、可恢复状态、不可达状态。</p>
+</li>
+<li><p>只有当一个对象处于不可达状态时，系统才会真正回收该对象所占有的资源。</p>
+</li>
+</ul>
+<h4 id="4-1-2-强引用-p120"><a href="#4-1-2-强引用-p120" class="headerlink" title="4.1.2 强引用 p120"></a>4.1.2 强引用 p120</h4><ul>
+<li>强引用是造成 Java 内存泄漏的主要原因之一。</li>
+</ul>
+<h4 id="4-1-3-软引用-p120"><a href="#4-1-3-软引用-p120" class="headerlink" title="4.1.3 软引用 p120"></a>4.1.3 软引用 p120</h4><ul>
+<li>通过 SoftReference 类来实现。对于只有软引用的对象而言，当系统内存空间足够时，它不会被系统回收，程序也可使用该对象；当系统内存空间不足时，系统将会回收它。</li>
+</ul>
+<h4 id="4-1-4-弱引用-p123"><a href="#4-1-4-弱引用-p123" class="headerlink" title="4.1.4 弱引用 p123"></a>4.1.4 弱引用 p123</h4><ul>
+<li><p>通过 WeakReference 类来实现。对于只有弱引用的对象而言，当系统垃圾回收机制运行时，不管系统内存是否足够，总会回收该对象所占用的内存。</p>
+</li>
+<li><p>当程序有大量的 Java 对象需要使用弱引用来引用时，可以考虑使用 WeakHashMap 来保存它们。</p>
+</li>
+</ul>
+<h4 id="4-1-5-虚引用-p127"><a href="#4-1-5-虚引用-p127" class="headerlink" title="4.1.5 虚引用 p127"></a>4.1.5 虚引用 p127</h4><ul>
+<li>虚引用的主要作用就是跟踪对象被垃圾回收的状态。不能单独使用，必须和引用队列（ReferenceQueue）联合使用。</li>
+</ul>
+<h3 id="4-2-Java-的内存泄漏-p128"><a href="#4-2-Java-的内存泄漏-p128" class="headerlink" title="4.2 Java 的内存泄漏 p128"></a>4.2 Java 的内存泄漏 p128</h3><h3 id="4-3-垃圾回收机制-p132"><a href="#4-3-垃圾回收机制-p132" class="headerlink" title="4.3 垃圾回收机制 p132"></a>4.3 垃圾回收机制 p132</h3><h4 id="4-3-1-垃圾回收的基本算法-p132"><a href="#4-3-1-垃圾回收的基本算法-p132" class="headerlink" title="4.3.1 垃圾回收的基本算法 p132"></a>4.3.1 垃圾回收的基本算法 p132</h4><ul>
+<li><p>对于一个垃圾回收器的设计算法来说，大致有如下可供选择的设计：串行回收和并行回收；并发执行和应用程序停止；压缩&#x2F;不压缩和复制。</p>
+</li>
+<li><p>现行的垃圾回收器用分代的方式来采用不同的回收设计。分代的基本思路是根据对象生存时间的长短，把堆内存分成三代：Young,Old,Permanent。</p>
+</li>
+</ul>
+<h4 id="4-3-2-堆内存的分代回收-p134"><a href="#4-3-2-堆内存的分代回收-p134" class="headerlink" title="4.3.2 堆内存的分代回收 p134"></a>4.3.2 堆内存的分代回收 p134</h4><h4 id="4-3-3-与垃圾回收相关的附加选项-p136"><a href="#4-3-3-与垃圾回收相关的附加选项-p136" class="headerlink" title="4.3.3 与垃圾回收相关的附加选项 p136"></a>4.3.3 与垃圾回收相关的附加选项 p136</h4><h4 id="4-3-4-常见的垃圾回收器-p136"><a href="#4-3-4-常见的垃圾回收器-p136" class="headerlink" title="* 4.3.4 常见的垃圾回收器 p136"></a>* 4.3.4 常见的垃圾回收器 p136</h4><ul>
+<li>1、串行回收器；2、并行回收器；3、并行压缩回收器；4、并发标识-清理回收器（CMS）</li>
+</ul>
+<h3 id="4-4-内存管理小技巧-p140"><a href="#4-4-内存管理小技巧-p140" class="headerlink" title="4.4 内存管理小技巧 p140"></a>4.4 内存管理小技巧 p140</h3><h4 id="4-4-1-尽量使用直接量-p141"><a href="#4-4-1-尽量使用直接量-p141" class="headerlink" title="4.4.1 尽量使用直接量 p141"></a>4.4.1 尽量使用直接量 p141</h4><h4 id="4-4-2-使用-StringBuilder-和-StringBuffer-进行字符串连接-p141"><a href="#4-4-2-使用-StringBuilder-和-StringBuffer-进行字符串连接-p141" class="headerlink" title="4.4.2 使用 StringBuilder 和 StringBuffer 进行字符串连接 p141"></a>4.4.2 使用 StringBuilder 和 StringBuffer 进行字符串连接 p141</h4><h4 id="4-4-3-尽早释放无用对象引用-p141"><a href="#4-4-3-尽早释放无用对象引用-p141" class="headerlink" title="4.4.3 尽早释放无用对象引用 p141"></a>4.4.3 尽早释放无用对象引用 p141</h4><ul>
+<li>大部分时候程序无须将局部引用变量显式设为 null。</li>
+</ul>
+<h4 id="4-4-4-尽量少用静态变量-p142"><a href="#4-4-4-尽量少用静态变量-p142" class="headerlink" title="4.4.4 尽量少用静态变量 p142"></a>4.4.4 尽量少用静态变量 p142</h4><h4 id="4-4-5-避免在经常调用的方法、循环中创建-Java-对象-p142"><a href="#4-4-5-避免在经常调用的方法、循环中创建-Java-对象-p142" class="headerlink" title="4.4.5 避免在经常调用的方法、循环中创建 Java 对象 p142"></a>4.4.5 避免在经常调用的方法、循环中创建 Java 对象 p142</h4><h4 id="4-4-6-缓存经常使用的对象-p143"><a href="#4-4-6-缓存经常使用的对象-p143" class="headerlink" title="4.4.6 缓存经常使用的对象 p143"></a>4.4.6 缓存经常使用的对象 p143</h4><ul>
+<li>开源的缓存实现有 OSCache、Ehcache，它们大都实现了 FIFO、MRU 等常见的缓存算法。</li>
+</ul>
+<h4 id="4-4-7-尽量不要使用-finalize-方法-p143"><a href="#4-4-7-尽量不要使用-finalize-方法-p143" class="headerlink" title="4.4.7 尽量不要使用 finalize 方法 p143"></a>4.4.7 尽量不要使用 finalize 方法 p143</h4><h4 id="4-4-8-考虑使用-SoftReference-p144"><a href="#4-4-8-考虑使用-SoftReference-p144" class="headerlink" title="4.4.8 考虑使用 SoftReference p144"></a>4.4.8 考虑使用 SoftReference p144</h4><h2 id="第-5-章-表达式中的陷阱-p145"><a href="#第-5-章-表达式中的陷阱-p145" class="headerlink" title="第 5 章 表达式中的陷阱 p145"></a>第 5 章 表达式中的陷阱 p145</h2><h3 id="5-1-关于字符串的陷阱-p146"><a href="#5-1-关于字符串的陷阱-p146" class="headerlink" title="5.1 关于字符串的陷阱 p146"></a>5.1 关于字符串的陷阱 p146</h3><h4 id="5-1-1-JVM-对字符串的处理-p146"><a href="#5-1-1-JVM-对字符串的处理-p146" class="headerlink" title="5.1.1 JVM 对字符串的处理 p146"></a>5.1.1 JVM 对字符串的处理 p146</h4><ul>
+<li><p>对于 Java 程序中的字符串直接量，JVM 会使用一个字符串池来保存它们。</p>
+</li>
+<li><p>当程序中需要使用字符串、基本类型包装类实例时，应该尽量使用字符串直接量、基本类型值的直接量，这样能保证较好的性能。</p>
+</li>
+</ul>
+<h4 id="5-1-2-不可变的字符串-p149"><a href="#5-1-2-不可变的字符串-p149" class="headerlink" title="5.1.2 不可变的字符串 p149"></a>5.1.2 不可变的字符串 p149</h4><ul>
+<li><p>当一个 String 对象创建完成后，该 String 类里包含的字符序列就被固定下来，以后永远都不能改变。</p>
+</li>
+<li><p>System 提供的 identifyHashCode()静态方法用于获取某个对象唯一的 hashCode 值，这个方法的返回值与该类是否重写了 hashCode()方法无关。</p>
+</li>
+</ul>
+<h4 id="5-1-3-字符串比较-p151"><a href="#5-1-3-字符串比较-p151" class="headerlink" title="5.1.3 字符串比较 p151"></a>5.1.3 字符串比较 p151</h4><h3 id="5-2-表达式类型的陷阱-p153"><a href="#5-2-表达式类型的陷阱-p153" class="headerlink" title="5.2 表达式类型的陷阱 p153"></a>5.2 表达式类型的陷阱 p153</h3><h4 id="5-2-1-表达式类型的自动提升-p153"><a href="#5-2-1-表达式类型的自动提升-p153" class="headerlink" title="5.2.1 表达式类型的自动提升 p153"></a>5.2.1 表达式类型的自动提升 p153</h4><ul>
+<li>当一个算术表达式包含多个基本类型的值时，整个算术表达式的数据类型将自动提升。</li>
+</ul>
+<h4 id="5-2-2-复合赋值运算符的陷阱-p154"><a href="#5-2-2-复合赋值运算符的陷阱-p154" class="headerlink" title="5.2.2 复合赋值运算符的陷阱 p154"></a>5.2.2 复合赋值运算符的陷阱 p154</h4><ul>
+<li><p>复合赋值运算符包含了一个隐式类型转换，a+&#x3D;5 等价于 a&#x3D;(a 的类型)(a+5)</p>
+</li>
+<li><p>复合赋值运算的使用注意点：p156</p>
+</li>
+</ul>
+<h4 id="5-2-3-Java7-新增的二进制整数-p156"><a href="#5-2-3-Java7-新增的二进制整数-p156" class="headerlink" title="5.2.3 Java7 新增的二进制整数 p156"></a>5.2.3 Java7 新增的二进制整数 p156</h4><h3 id="5-3-输入法导致的陷阱-p157"><a href="#5-3-输入法导致的陷阱-p157" class="headerlink" title="5.3 输入法导致的陷阱 p157"></a>5.3 输入法导致的陷阱 p157</h3><h3 id="5-4-注释字符必须合法-p158"><a href="#5-4-注释字符必须合法-p158" class="headerlink" title="5.4 注释字符必须合法 p158"></a>5.4 注释字符必须合法 p158</h3><h3 id="5-5-转义字符的陷阱-p158"><a href="#5-5-转义字符的陷阱-p158" class="headerlink" title="5.5 转义字符的陷阱 p158"></a>5.5 转义字符的陷阱 p158</h3><h4 id="5-5-1-慎用字符的-Unicode-转义形式-p158"><a href="#5-5-1-慎用字符的-Unicode-转义形式-p158" class="headerlink" title="5.5.1 慎用字符的 Unicode 转义形式 p158"></a>5.5.1 慎用字符的 Unicode 转义形式 p158</h4><h4 id="5-5-2-中止行注释的转义字符-p159"><a href="#5-5-2-中止行注释的转义字符-p159" class="headerlink" title="5.5.2 中止行注释的转义字符 p159"></a>5.5.2 中止行注释的转义字符 p159</h4><h3 id="5-6-泛型可能引起的错误-p160"><a href="#5-6-泛型可能引起的错误-p160" class="headerlink" title="5.6 泛型可能引起的错误 p160"></a>5.6 泛型可能引起的错误 p160</h3><h4 id="5-6-1-原始类型变量的赋值-p160"><a href="#5-6-1-原始类型变量的赋值-p160" class="headerlink" title="5.6.1 原始类型变量的赋值 p160"></a>5.6.1 原始类型变量的赋值 p160</h4><ul>
+<li>把原始类型的变量赋给带泛型类型的变量时的 sample p160</li>
+</ul>
+<h4 id="5-6-2-原始类型带来的擦除-p162"><a href="#5-6-2-原始类型带来的擦除-p162" class="headerlink" title="5.6.2 原始类型带来的擦除 p162"></a>5.6.2 原始类型带来的擦除 p162</h4><ul>
+<li><p>将一个 List<String>类型的对象转型为 List，则该 List 对集合元素的类型检查变成了类型变量的上限（即 Object）。</p>
+</li>
+<li><p>当把一个带泛型信息的 Java 对象赋给不带泛型信息的变量时，Java 程序会发生擦除，这种擦除不仅会擦除使用该 Java 类时传入的类型实参，而且会擦除所有的泛型信息，也就是擦除所有尖括号里的信息。p163</p>
+</li>
+</ul>
+<h4 id="5-6-3-创建泛型数组的陷阱-p164"><a href="#5-6-3-创建泛型数组的陷阱-p164" class="headerlink" title="5.6.3 创建泛型数组的陷阱 p164"></a>5.6.3 创建泛型数组的陷阱 p164</h4><h3 id="5-7-正则表达式的陷阱-p166"><a href="#5-7-正则表达式的陷阱-p166" class="headerlink" title="5.7 正则表达式的陷阱 p166"></a>5.7 正则表达式的陷阱 p166</h3><h3 id="5-8-多线程的陷阱-p167"><a href="#5-8-多线程的陷阱-p167" class="headerlink" title="5.8 多线程的陷阱 p167"></a>5.8 多线程的陷阱 p167</h3><h4 id="5-8-1-不要调用-run-方法-p167"><a href="#5-8-1-不要调用-run-方法-p167" class="headerlink" title="5.8.1 不要调用 run 方法 p167"></a>5.8.1 不要调用 run 方法 p167</h4><h4 id="5-8-2-静态的同步方法-p169"><a href="#5-8-2-静态的同步方法-p169" class="headerlink" title="5.8.2 静态的同步方法 p169"></a>5.8.2 静态的同步方法 p169</h4><ul>
+<li>任何线程进入同步方法、同步代码块之前，必须先获取同步方法、同步代码块对应的同步监视器。</li>
+</ul>
+<h4 id="5-8-3-静态初始化块启动新线程执行初始化-p171"><a href="#5-8-3-静态初始化块启动新线程执行初始化-p171" class="headerlink" title="5.8.3 静态初始化块启动新线程执行初始化 p171"></a>5.8.3 静态初始化块启动新线程执行初始化 p171</h4><h4 id="5-8-4-注意多线程执行环境-p176"><a href="#5-8-4-注意多线程执行环境-p176" class="headerlink" title="5.8.4 注意多线程执行环境 p176"></a>5.8.4 注意多线程执行环境 p176</h4><ul>
+<li>将线程不安全的类改成线程安全的形式 p179</li>
+</ul>
+<h2 id="第-6-章-流程控制的陷阱-p181"><a href="#第-6-章-流程控制的陷阱-p181" class="headerlink" title="第 6 章 流程控制的陷阱 p181"></a>第 6 章 流程控制的陷阱 p181</h2><h3 id="6-1-switch-语句陷阱-p182"><a href="#6-1-switch-语句陷阱-p182" class="headerlink" title="6.1 switch 语句陷阱 p182"></a>6.1 switch 语句陷阱 p182</h3><h4 id="6-1-1-default-分支永远会执行吗-p182"><a href="#6-1-1-default-分支永远会执行吗-p182" class="headerlink" title="6.1.1 default 分支永远会执行吗 p182"></a>6.1.1 default 分支永远会执行吗 p182</h4><h4 id="6-1-2-break-的重要性-p183"><a href="#6-1-2-break-的重要性-p183" class="headerlink" title="6.1.2 break 的重要性 p183"></a>6.1.2 break 的重要性 p183</h4><ul>
+<li>输入 javac -X 命令查看支持的全部扩展选项</li>
+</ul>
+<h4 id="6-1-3-Java7-增强的-switch-表达式-p185"><a href="#6-1-3-Java7-增强的-switch-表达式-p185" class="headerlink" title="6.1.3 Java7 增强的 switch 表达式 p185"></a>6.1.3 Java7 增强的 switch 表达式 p185</h4><h3 id="6-2-标签引起的陷阱-p186"><a href="#6-2-标签引起的陷阱-p186" class="headerlink" title="6.2 标签引起的陷阱 p186"></a>6.2 标签引起的陷阱 p186</h3><h3 id="6-3-if-语句的陷阱-p187"><a href="#6-3-if-语句的陷阱-p187" class="headerlink" title="6.3 if 语句的陷阱 p187"></a>6.3 if 语句的陷阱 p187</h3><h4 id="6-3-1-else-隐含的条件-p187"><a href="#6-3-1-else-隐含的条件-p187" class="headerlink" title="6.3.1 else 隐含的条件 p187"></a>6.3.1 else 隐含的条件 p187</h4><ul>
+<li>使用 if…else 语句有一条基本规则：总是优先把包含范围小的条件放在前面处理。</li>
+</ul>
+<h4 id="6-3-2-小心空语句-p190"><a href="#6-3-2-小心空语句-p190" class="headerlink" title="6.3.2 小心空语句 p190"></a>6.3.2 小心空语句 p190</h4><h3 id="6-4-循环体的花括号-p191"><a href="#6-4-循环体的花括号-p191" class="headerlink" title="6.4 循环体的花括号 p191"></a>6.4 循环体的花括号 p191</h3><h4 id="6-4-1-什么时候可以省略花括号-p191"><a href="#6-4-1-什么时候可以省略花括号-p191" class="headerlink" title="6.4.1 什么时候可以省略花括号 p191"></a>6.4.1 什么时候可以省略花括号 p191</h4><h4 id="6-4-2-省略花括号的危险-p192"><a href="#6-4-2-省略花括号的危险-p192" class="headerlink" title="6.4.2 省略花括号的危险 p192"></a>6.4.2 省略花括号的危险 p192</h4><ul>
+<li>大部分时候，如果循环体只包含一条语句，那么就可以省略循环体的花括号；但如果循环体只包含一条局部变量定义语句，那依然不可以省略循环体的花括号。</li>
+</ul>
+<h3 id="6-5-for-循环的陷阱-p194"><a href="#6-5-for-循环的陷阱-p194" class="headerlink" title="6.5 for 循环的陷阱 p194"></a>6.5 for 循环的陷阱 p194</h3><h4 id="6-5-1-分号惹的祸-p194"><a href="#6-5-1-分号惹的祸-p194" class="headerlink" title="6.5.1 分号惹的祸 p194"></a>6.5.1 分号惹的祸 p194</h4><h4 id="6-5-2-小心循环计数器的值-p197"><a href="#6-5-2-小心循环计数器的值-p197" class="headerlink" title="6.5.2 小心循环计数器的值 p197"></a>6.5.2 小心循环计数器的值 p197</h4><h4 id="6-5-3-浮点数作循环计数器-p197"><a href="#6-5-3-浮点数作循环计数器-p197" class="headerlink" title="6.5.3 浮点数作循环计数器 p197"></a>6.5.3 浮点数作循环计数器 p197</h4><h3 id="6-6-foreach-循环的循环计数器-p199"><a href="#6-6-foreach-循环的循环计数器-p199" class="headerlink" title="6.6 foreach 循环的循环计数器 p199"></a>6.6 foreach 循环的循环计数器 p199</h3><h2 id="第-7-章-面向对象的陷阱-p202"><a href="#第-7-章-面向对象的陷阱-p202" class="headerlink" title="第 7 章 面向对象的陷阱 p202"></a>第 7 章 面向对象的陷阱 p202</h2><h3 id="7-1-instanceof-运算符的陷阱-p203"><a href="#7-1-instanceof-运算符的陷阱-p203" class="headerlink" title="7.1 instanceof 运算符的陷阱 p203"></a>7.1 instanceof 运算符的陷阱 p203</h3><ul>
+<li><p>前一个操作数为引用类型的变量，后一个操作数通常为一个类或接口。</p>
+</li>
+<li><p>使 null 调用 instanceof 运算符时返回 false 是非常有用的行为。</p>
+</li>
+</ul>
+<h3 id="7-2-构造器的陷阱-p207"><a href="#7-2-构造器的陷阱-p207" class="headerlink" title="7.2 构造器的陷阱 p207"></a>7.2 构造器的陷阱 p207</h3><h4 id="7-2-1-构造器之前的-void-p207"><a href="#7-2-1-构造器之前的-void-p207" class="headerlink" title="7.2.1 构造器之前的 void p207"></a>7.2.1 构造器之前的 void p207</h4><h4 id="7-2-2-构造器创建对象吗-p208"><a href="#7-2-2-构造器创建对象吗-p208" class="headerlink" title="7.2.2 构造器创建对象吗 p208"></a>7.2.2 构造器创建对象吗 p208</h4><ul>
+<li><p>构造器并不会创建 Java 对象，构造器只是负责执行初始化。</p>
+</li>
+<li><p>以下 2 种方式创建 Java 对象无需使用构造器：使用反序列化的方式恢复 Java 对象；使用 clone 方法复制 Java 对象。</p>
+</li>
+<li><p>为单例类提供 readResolve()方法，保证反序列化时得到已有的 Java 实例。例 p210</p>
+</li>
+</ul>
+<h4 id="7-2-3-无限递归的构造器-p212"><a href="#7-2-3-无限递归的构造器-p212" class="headerlink" title="7.2.3 无限递归的构造器 p212"></a>7.2.3 无限递归的构造器 p212</h4><h3 id="7-3-持有当前类的实例-p214"><a href="#7-3-持有当前类的实例-p214" class="headerlink" title="7.3 持有当前类的实例 p214"></a>7.3 持有当前类的实例 p214</h3><ul>
+<li>对于一个 Java 类而言，它的一个实例变量持有当前类的另一个实例是被允许的。</li>
+</ul>
+<h3 id="7-4-到底调用哪个重载的方法-p215"><a href="#7-4-到底调用哪个重载的方法-p215" class="headerlink" title="7.4 到底调用哪个重载的方法 p215"></a>7.4 到底调用哪个重载的方法 p215</h3><h3 id="7-5-方法重写的陷阱-p218"><a href="#7-5-方法重写的陷阱-p218" class="headerlink" title="7.5 方法重写的陷阱 p218"></a>7.5 方法重写的陷阱 p218</h3><h4 id="7-5-1-重写-private-方法-p218"><a href="#7-5-1-重写-private-方法-p218" class="headerlink" title="7.5.1 重写 private 方法 p218"></a>7.5.1 重写 private 方法 p218</h4><h4 id="7-5-2-重写其他访问权限的方法-p219"><a href="#7-5-2-重写其他访问权限的方法-p219" class="headerlink" title="7.5.2 重写其他访问权限的方法 p219"></a>7.5.2 重写其他访问权限的方法 p219</h4><h3 id="7-6-非静态内部类的陷阱-p220"><a href="#7-6-非静态内部类的陷阱-p220" class="headerlink" title="7.6 非静态内部类的陷阱 p220"></a>7.6 非静态内部类的陷阱 p220</h3><h4 id="7-6-1-非静态内部类的构造器-p220"><a href="#7-6-1-非静态内部类的构造器-p220" class="headerlink" title="7.6.1 非静态内部类的构造器 p220"></a>7.6.1 非静态内部类的构造器 p220</h4><ul>
+<li><p>非静态内部类必须寄生在外部类的实例中，没有外部类的对象，就不可能产生非静态内部类的对象。因此，非静态内部类不可能有无参数的构造器——即使系统为非静态内部类提供一个默认的构造器，这个默认的构造器也需要一个外部类形参。</p>
+</li>
+<li><p>系统在编译阶段总会为非静态内部类的构造器增加一个参数，非静态内部类的构造器的第一个形参总是外部类。</p>
+</li>
+</ul>
+<h4 id="7-6-2-非静态内部类不能拥有静态成员-p222"><a href="#7-6-2-非静态内部类不能拥有静态成员-p222" class="headerlink" title="7.6.2 非静态内部类不能拥有静态成员 p222"></a>7.6.2 非静态内部类不能拥有静态成员 p222</h4><h4 id="7-6-3-非静态内部类的子类-p223"><a href="#7-6-3-非静态内部类的子类-p223" class="headerlink" title="7.6.3 非静态内部类的子类 p223"></a>7.6.3 非静态内部类的子类 p223</h4><ul>
+<li><p>非静态内部类在外部类的内部派生子类是安全的。</p>
+</li>
+<li><p>如果条件允许，推荐多使用静态内部类，而不是非静态内部类。对于静态内部类来说，外部类相当于它的一个包。</p>
+</li>
+</ul>
+<h3 id="7-7-static-关键字-p224"><a href="#7-7-static-关键字-p224" class="headerlink" title="7.7 static 关键字 p224"></a>7.7 static 关键字 p224</h3><h4 id="7-7-1-静态方法属于类-p224"><a href="#7-7-1-静态方法属于类-p224" class="headerlink" title="7.7.1 静态方法属于类 p224"></a>7.7.1 静态方法属于类 p224</h4><h4 id="7-7-2-静态内部类的限制-p226"><a href="#7-7-2-静态内部类的限制-p226" class="headerlink" title="7.7.2 静态内部类的限制 p226"></a>7.7.2 静态内部类的限制 p226</h4><ul>
+<li>静态内部类不能访问外部类的非静态成员。</li>
+</ul>
+<h3 id="7-8-native-方法的陷阱-p226"><a href="#7-8-native-方法的陷阱-p226" class="headerlink" title="7.8 native 方法的陷阱 p226"></a>7.8 native 方法的陷阱 p226</h3><ul>
+<li><p>对于 native 方法而言，Java 不会为该方法提供实现体。</p>
+</li>
+<li><p>native 方法通常需要借助 C 语言完成，实现步骤：p227</p>
+</li>
+</ul>
+<h2 id="第-8-章-异常处理的陷阱-p229"><a href="#第-8-章-异常处理的陷阱-p229" class="headerlink" title="第 8 章 异常处理的陷阱 p229"></a>第 8 章 异常处理的陷阱 p229</h2><h3 id="8-1-正确关闭资源的方式-p230"><a href="#8-1-正确关闭资源的方式-p230" class="headerlink" title="8.1 正确关闭资源的方式 p230"></a>8.1 正确关闭资源的方式 p230</h3><ul>
+<li>实例代码 p232</li>
+</ul>
+<h4 id="8-1-2-使用-Java7-增强的-try-语句关闭资源-p233"><a href="#8-1-2-使用-Java7-增强的-try-语句关闭资源-p233" class="headerlink" title="8.1.2 使用 Java7 增强的 try 语句关闭资源 p233"></a>8.1.2 使用 Java7 增强的 try 语句关闭资源 p233</h4><ul>
+<li>实例代码 p234</li>
+</ul>
+<h3 id="8-2-finally-块的陷阱-p235"><a href="#8-2-finally-块的陷阱-p235" class="headerlink" title="8.2 finally 块的陷阱 p235"></a>8.2 finally 块的陷阱 p235</h3><h4 id="8-2-1-finally-的执行规则-p235"><a href="#8-2-1-finally-的执行规则-p235" class="headerlink" title="8.2.1 finally 的执行规则 p235"></a>8.2.1 finally 的执行规则 p235</h4><ul>
+<li>实例代码：为系统注册了一个关闭钩子，关闭钩子负责在程序退出时回收系统资源。 p236</li>
+</ul>
+<h4 id="8-2-2-finally-块和方法返回值-p236"><a href="#8-2-2-finally-块和方法返回值-p236" class="headerlink" title="8.2.2 finally 块和方法返回值 p236"></a>8.2.2 finally 块和方法返回值 p236</h4><h3 id="8-3-catch-块的方法-p238"><a href="#8-3-catch-块的方法-p238" class="headerlink" title="8.3 catch 块的方法 p238"></a>8.3 catch 块的方法 p238</h3><h4 id="8-3-1-catch-块的顺序-p238"><a href="#8-3-1-catch-块的顺序-p238" class="headerlink" title="8.3.1 catch 块的顺序 p238"></a>8.3.1 catch 块的顺序 p238</h4><ul>
+<li>捕捉父类异常的 catch 块都应该排在捕捉子类异常的 catch 块之后（先捕小异常再捕大异常），否则将出现编译错误。</li>
+</ul>
+<h4 id="8-3-2-不要用-catch-代替流程控制-p240"><a href="#8-3-2-不要用-catch-代替流程控制-p240" class="headerlink" title="8.3.2 不要用 catch 代替流程控制 p240"></a>8.3.2 不要用 catch 代替流程控制 p240</h4><h4 id="8-3-3-只有-catch-可能抛出的异常-p241"><a href="#8-3-3-只有-catch-可能抛出的异常-p241" class="headerlink" title="8.3.3 只有 catch 可能抛出的异常 p241"></a>8.3.3 只有 catch 可能抛出的异常 p241</h4><h4 id="8-3-4-做点实际的修复-p244"><a href="#8-3-4-做点实际的修复-p244" class="headerlink" title="8.3.4 做点实际的修复 p244"></a>8.3.4 做点实际的修复 p244</h4><h3 id="8-4-继承得到的异常-p246"><a href="#8-4-继承得到的异常-p246" class="headerlink" title="8.4 继承得到的异常 p246"></a>8.4 继承得到的异常 p246</h3><h3 id="8-5-Java7-增强的-throw-语句-p247"><a href="#8-5-Java7-增强的-throw-语句-p247" class="headerlink" title="8.5 Java7 增强的 throw 语句 p247"></a>8.5 Java7 增强的 throw 语句 p247</h3><h2 id="第-9-章-线性表-p250"><a href="#第-9-章-线性表-p250" class="headerlink" title="第 9 章 线性表 p250"></a>第 9 章 线性表 p250</h2><h3 id="9-1-线性表概述-p251"><a href="#9-1-线性表概述-p251" class="headerlink" title="9.1 线性表概述 p251"></a>9.1 线性表概述 p251</h3><h4 id="9-1-1-线性表的定义及逻辑结构-p251"><a href="#9-1-1-线性表的定义及逻辑结构-p251" class="headerlink" title="9.1.1 线性表的定义及逻辑结构 p251"></a>9.1.1 线性表的定义及逻辑结构 p251</h4><h4 id="9-1-2-线性表的基本操作-p252"><a href="#9-1-2-线性表的基本操作-p252" class="headerlink" title="9.1.2 线性表的基本操作 p252"></a>9.1.2 线性表的基本操作 p252</h4><h3 id="9-2-顺序存储结构-p252"><a href="#9-2-顺序存储结构-p252" class="headerlink" title="9.2 顺序存储结构 p252"></a>9.2 顺序存储结构 p252</h3><ul>
+<li>简单的顺序结构线性表的源代码。p254</li>
+</ul>
+<h3 id="9-3-链式存储结构-p257"><a href="#9-3-链式存储结构-p257" class="headerlink" title="9.3 链式存储结构 p257"></a>9.3 链式存储结构 p257</h3><ul>
+<li>链式存储结构的线性表不会按线性的逻辑顺序来保存数据元素，它需要在每一个数据元素里保存一个引用下一个数据元素的引用。</li>
+</ul>
+<h4 id="9-3-1-单链表上的基本运算-p258"><a href="#9-3-1-单链表上的基本运算-p258" class="headerlink" title="9.3.1 单链表上的基本运算 p258"></a>9.3.1 单链表上的基本运算 p258</h4><ul>
+<li><p>单链表指的是每个节点只保留一个引用，该引用指向当前节点的下一个节点，没有引用指向头节点，尾节点的 next 引用为 null。</p>
+</li>
+<li><p>链表和顺序表性能上的差异：顺序表在随机存取时性能很好；链表在插入、删除时性能很好。</p>
+</li>
+</ul>
+<h4 id="9-3-2-循环链表-p264"><a href="#9-3-2-循环链表-p264" class="headerlink" title="9.3.2 循环链表 p264"></a>9.3.2 循环链表 p264</h4><ul>
+<li>循环链表是一种首尾相接的链表。循环链表有一个显著特征：从链表的任一节点出发均可找到表中的其他所有节点。</li>
+</ul>
+<h4 id="9-3-3-双向链表-p265"><a href="#9-3-3-双向链表-p265" class="headerlink" title="9.3.3 双向链表 p265"></a>9.3.3 双向链表 p265</h4><ul>
+<li><p>双向链表是为每个节点保留两个引用 prev 和 next。</p>
+</li>
+<li><p>双向链表添加节点、删除节点的指针维护成本更大；在搜索节点、删除指定索引处的节点具有较好的性能。</p>
+</li>
+</ul>
+<h3 id="9-4-线性表的分析-p271"><a href="#9-4-线性表的分析-p271" class="headerlink" title="9.4 线性表的分析 p271"></a>9.4 线性表的分析 p271</h3><h4 id="9-4-1-线性表的实现分析-p271"><a href="#9-4-1-线性表的实现分析-p271" class="headerlink" title="9.4.1 线性表的实现分析 p271"></a>9.4.1 线性表的实现分析 p271</h4><ul>
+<li>线性表的顺序和链式两种实现的优势 p271</li>
+</ul>
+<h4 id="9-4-2-线性表的功能-p272"><a href="#9-4-2-线性表的功能-p272" class="headerlink" title="9.4.2 线性表的功能 p272"></a>9.4.2 线性表的功能 p272</h4><h2 id="第-10-章-栈和队列-p274"><a href="#第-10-章-栈和队列-p274" class="headerlink" title="第 10 章 栈和队列 p274"></a>第 10 章 栈和队列 p274</h2><h3 id="10-1-栈-p275"><a href="#10-1-栈-p275" class="headerlink" title="10.1 栈 p275"></a>10.1 栈 p275</h3><ul>
+<li>栈是一种特殊的线性表，这种线性表只能在固定一端（通常尾端）进行插入、删除操作。</li>
+</ul>
+<h4 id="10-1-1-栈的基本定义-p275"><a href="#10-1-1-栈的基本定义-p275" class="headerlink" title="10.1.1 栈的基本定义 p275"></a>10.1.1 栈的基本定义 p275</h4><ul>
+<li>栈就是一种后进先出（LIFO）的线性表。</li>
+</ul>
+<h4 id="10-1-2-栈的常用操作-p276"><a href="#10-1-2-栈的常用操作-p276" class="headerlink" title="10.1.2 栈的常用操作 p276"></a>10.1.2 栈的常用操作 p276</h4><ul>
+<li><p>栈的标志性方法：入栈、出栈、访问栈顶元素。</p>
+</li>
+<li><p>栈同样既可采用顺序结构或链式结构存储栈内元素。</p>
+</li>
+</ul>
+<h4 id="10-1-3-栈的顺序存储结构及实现-p276"><a href="#10-1-3-栈的顺序存储结构及实现-p276" class="headerlink" title="10.1.3 栈的顺序存储结构及实现 p276"></a>10.1.3 栈的顺序存储结构及实现 p276</h4><ul>
+<li>顺序栈的代码实现 p277</li>
+</ul>
+<h4 id="10-1-4-栈的链式存储结构及实现-p281"><a href="#10-1-4-栈的链式存储结构及实现-p281" class="headerlink" title="10.1.4 栈的链式存储结构及实现 p281"></a>10.1.4 栈的链式存储结构及实现 p281</h4><ul>
+<li>链栈的代码实现 p282</li>
+</ul>
+<h4 id="10-1-5-Java-集合中的栈-p284"><a href="#10-1-5-Java-集合中的栈-p284" class="headerlink" title="10.1.5 Java 集合中的栈 p284"></a>10.1.5 Java 集合中的栈 p284</h4><ul>
+<li><p>java.util.Stack：一个普通的顺序栈，底层基于数组实现，线程安全。</p>
+</li>
+<li><p>java.util.LinkedList：一个双端链表。代表栈的链式实现，线程不安全。</p>
+</li>
+</ul>
+<h3 id="10-2-对列-p284"><a href="#10-2-对列-p284" class="headerlink" title="10.2 对列 p284"></a>10.2 对列 p284</h3><ul>
+<li>队列使用固定的一端来插入数据元素，另一端只用于删除元素。</li>
+</ul>
+<h4 id="10-2-1-队列的基本定义-p284"><a href="#10-2-1-队列的基本定义-p284" class="headerlink" title="10.2.1 队列的基本定义 p284"></a>10.2.1 队列的基本定义 p284</h4><ul>
+<li>队列是一种特殊的线性表，只允许在表的前端进行删除，只允许在表的后端进行插入。先进先出（FIFO）的线性表。</li>
+</ul>
+<h4 id="10-2-2-队列的常用操作-p285"><a href="#10-2-2-队列的常用操作-p285" class="headerlink" title="10.2.2 队列的常用操作 p285"></a>10.2.2 队列的常用操作 p285</h4><ul>
+<li><p>队列的标志性方法：加入元素、删除元素、访问队列的前端元素。</p>
+</li>
+<li><p>队列同样既可采用顺序结构或链式结构存储队列内元素。</p>
+</li>
+</ul>
+<h4 id="10-2-3-队列的顺序存储结构及实现-p285"><a href="#10-2-3-队列的顺序存储结构及实现-p285" class="headerlink" title="10.2.3 队列的顺序存储结构及实现 p285"></a>10.2.3 队列的顺序存储结构及实现 p285</h4><ul>
+<li>顺序队列的代码实现 p286</li>
+</ul>
+<h4 id="10-2-4-循环队列-p289"><a href="#10-2-4-循环队列-p289" class="headerlink" title="10.2.4 循环队列 p289"></a>10.2.4 循环队列 p289</h4><ul>
+<li><p>循环队列是首尾相连的队列：当 front、rear 变量值达到底层数组的 capacity-1 之后，再前进一位就自动变成 0。</p>
+</li>
+<li><p>循环队列的代码实现 p290</p>
+</li>
+</ul>
+<h4 id="10-2-5-队列的链式存储结构及实现-p293"><a href="#10-2-5-队列的链式存储结构及实现-p293" class="headerlink" title="10.2.5 队列的链式存储结构及实现 p293"></a>10.2.5 队列的链式存储结构及实现 p293</h4><ul>
+<li><p>链队列的代码实现 p294</p>
+</li>
+<li><p>链队列不会出现队列“满”的情形，因此程序可以不受任何限制地向链队列中添加元素。</p>
+</li>
+</ul>
+<h4 id="10-2-6-Java-集合中的队列-p296"><a href="#10-2-6-Java-集合中的队列-p296" class="headerlink" title="10.2.6 Java 集合中的队列 p296"></a>10.2.6 Java 集合中的队列 p296</h4><ul>
+<li><p>从 JDK1.5 开始，Java 集合框架中提供了一个 Queue 接口，该接口代表了一个队列，实现该接口的类可以当成队列使用。</p>
+</li>
+<li><p>Queue 接口里定义的 6 个方法 p297</p>
+</li>
+<li><p>Dequeue 接口是一个双端队列。</p>
+</li>
+</ul>
+<h3 id="10-3-双端队列-p297"><a href="#10-3-双端队列-p297" class="headerlink" title="10.3 双端队列 p297"></a>10.3 双端队列 p297</h3><ul>
+<li><p>双端队列（Dequeue）可以在两端同时进行插入、删除操作。</p>
+</li>
+<li><p>Dequeue 既可当成队列使用，也可当成栈使用。</p>
+</li>
+<li><p>JDK 为 Dequeue 提供了 ArrayDequeue（顺序存储结构的双端队列）、LinkedList（链式存储结构的双端队列）两个常见的实现类。</p>
+</li>
+<li><p>LinkedList 既可当成线性表、也可当成栈、还可当成队列，但对大部分程序而言，使用 ArrayList、ArrayDequeue 的性能比 LinkedList 更好。</p>
+</li>
+</ul>
+<h2 id="第-11-章-树和二叉树-p299"><a href="#第-11-章-树和二叉树-p299" class="headerlink" title="第 11 章 树和二叉树 p299"></a>第 11 章 树和二叉树 p299</h2><h3 id="11-1-树的概述-p300"><a href="#11-1-树的概述-p300" class="headerlink" title="11.1 树的概述 p300"></a>11.1 树的概述 p300</h3><ul>
+<li>树是一种非线性结构。</li>
+</ul>
+<h4 id="11-1-1-树的定义和基本术语-p300"><a href="#11-1-1-树的定义和基本术语-p300" class="headerlink" title="11.1.1 树的定义和基本术语 p300"></a>11.1.1 树的定义和基本术语 p300</h4><ul>
+<li>与树有关的术语 p301</li>
+</ul>
+<h4 id="11-1-2-树的基本操作-p301"><a href="#11-1-2-树的基本操作-p301" class="headerlink" title="11.1.2 树的基本操作 p301"></a>11.1.2 树的基本操作 p301</h4><ul>
+<li>实现树的数据结构有 2 种选择：1）父节点表示法：每个子节点都记录它的父节点；2）子节点链表示法：每个非叶子节点通过一个链表来记录它所有的子节点。</li>
+</ul>
+<h4 id="11-1-3-父节点表示法-p302"><a href="#11-1-3-父节点表示法-p302" class="headerlink" title="11.1.3 父节点表示法 p302"></a>11.1.3 父节点表示法 p302</h4><ul>
+<li><p>采用父节点表示法的代码实现 p303</p>
+</li>
+<li><p>父节点表示法的特点是：每个节点都可以快速找到它的父节点，但如果要找某个节点的所有子节点就比较麻烦，程序要遍历整个节点数组。</p>
+</li>
+</ul>
+<h4 id="11-1-4-子节点链表示法-p305"><a href="#11-1-4-子节点链表示法-p305" class="headerlink" title="11.1.4 子节点链表示法 p305"></a>11.1.4 子节点链表示法 p305</h4><ul>
+<li><p>子节点链表示法的代码实现 p306</p>
+</li>
+<li><p>子节点链表示法的特点是：每个节点都可以快速找到它的所有子节点，但如果要找某个节点的父节点则比较麻烦，程序要遍历整个节点数组。</p>
+</li>
+</ul>
+<h3 id="11-2-二叉树-p309"><a href="#11-2-二叉树-p309" class="headerlink" title="11.2 二叉树 p309"></a>11.2 二叉树 p309</h3><h4 id="11-2-1-二叉树的定义和基本概念-p309"><a href="#11-2-1-二叉树的定义和基本概念-p309" class="headerlink" title="11.2.1 二叉树的定义和基本概念 p309"></a>11.2.1 二叉树的定义和基本概念 p309</h4><ul>
+<li><p>二叉树指的是每个节点最多只能有两个子树的有序数。</p>
+</li>
+<li><p>如果一棵二叉树除最后一层外，其余层的所有节点都是满的，并且最后一层或者是满的，或者仅在右边缺少若干连续的节点，则此二叉树就是完全二叉树。</p>
+</li>
+<li><p>满二叉树是一种特殊的完全二叉树。当完全二叉树最后一层的所有节点都是满的时，这棵完全二叉树就变成了满二叉树。</p>
+</li>
+</ul>
+<h4 id="11-2-2-二叉树的基本操作-p311"><a href="#11-2-2-二叉树的基本操作-p311" class="headerlink" title="11.2.2 二叉树的基本操作 p311"></a>11.2.2 二叉树的基本操作 p311</h4><ul>
+<li>要实现二叉树的数据结构，有三种选择：顺序存储；二叉链表存储；三叉链表存储。</li>
+</ul>
+<h4 id="11-2-3-二叉树的顺序存储-p312"><a href="#11-2-3-二叉树的顺序存储-p312" class="headerlink" title="11.2.3 二叉树的顺序存储 p312"></a>11.2.3 二叉树的顺序存储 p312</h4><ul>
+<li><p>当使用数组来存储二叉树的所有节点时可能会产生一定的空间浪费，如果该二叉树是完全二叉树，就不会有任何空间浪费了；但如果该二叉树的所有节点都只有右子节点，那么会产生相当大的空间浪费。</p>
+</li>
+<li><p>顺序存储的二叉树的代码实现 p313</p>
+</li>
+</ul>
+<h4 id="11-2-4-二叉树的二叉链表存储-p315"><a href="#11-2-4-二叉树的二叉链表存储-p315" class="headerlink" title="11.2.4 二叉树的二叉链表存储 p315"></a>11.2.4 二叉树的二叉链表存储 p315</h4><ul>
+<li><p>思想为每个节点增加 left、right 两个指针，分别引用该节点的左右两个子节点。</p>
+</li>
+<li><p>二叉链表的代码实现 p316</p>
+</li>
+<li><p>这种二叉链表的存储方式在遍历树节点时效率不高，指定节点访问其父节点时也比较困难。</p>
+</li>
+</ul>
+<h4 id="11-2-5-二叉树的三叉链表存储-p319"><a href="#11-2-5-二叉树的三叉链表存储-p319" class="headerlink" title="11.2.5 二叉树的三叉链表存储 p319"></a>11.2.5 二叉树的三叉链表存储 p319</h4><ul>
+<li><p>三叉链表是在二叉链表上增加了 parent 指针。</p>
+</li>
+<li><p>三叉链表的代码实现 p319</p>
+</li>
+</ul>
+<h3 id="11-3-遍历二叉树-p322"><a href="#11-3-遍历二叉树-p322" class="headerlink" title="11.3 遍历二叉树 p322"></a>11.3 遍历二叉树 p322</h3><ul>
+<li><p>遍历顺序结构的二叉树直接遍历底层数组即可；遍历链表存储的二叉树有 2 种：深度优先遍历、广度优先遍历。</p>
+</li>
+<li><p>深度优先遍历算法分为：前序遍历（DLR）、中序遍历(LDR)、后续遍历(LRD)</p>
+</li>
+</ul>
+<h4 id="11-3-1-先序遍历-p323"><a href="#11-3-1-先序遍历-p323" class="headerlink" title="11.3.1 先序遍历 p323"></a>11.3.1 先序遍历 p323</h4><h4 id="11-3-2-中序遍历-p323"><a href="#11-3-2-中序遍历-p323" class="headerlink" title="11.3.2 中序遍历 p323"></a>11.3.2 中序遍历 p323</h4><h4 id="11-3-3-后序遍历-p324"><a href="#11-3-3-后序遍历-p324" class="headerlink" title="11.3.3 后序遍历 p324"></a>11.3.3 后序遍历 p324</h4><h4 id="11-3-4-广度优先（按层）遍历-p325"><a href="#11-3-4-广度优先（按层）遍历-p325" class="headerlink" title="11.3.4 广度优先（按层）遍历 p325"></a>11.3.4 广度优先（按层）遍历 p325</h4><ul>
+<li>广度优先遍历的代码实现 p325</li>
+</ul>
+<h3 id="11-4-转换方法-p325"><a href="#11-4-转换方法-p325" class="headerlink" title="11.4 转换方法 p325"></a>11.4 转换方法 p325</h3><h4 id="11-4-1-森林、数和二叉树的转换-p326"><a href="#11-4-1-森林、数和二叉树的转换-p326" class="headerlink" title="11.4.1 森林、数和二叉树的转换 p326"></a>11.4.1 森林、数和二叉树的转换 p326</h4><h4 id="11-4-2-树的链表存储-p327"><a href="#11-4-2-树的链表存储-p327" class="headerlink" title="11.4.2 树的链表存储 p327"></a>11.4.2 树的链表存储 p327</h4><h3 id="11-5-哈夫曼数-p327"><a href="#11-5-哈夫曼数-p327" class="headerlink" title="11.5 哈夫曼数 p327"></a>11.5 哈夫曼数 p327</h3><h4 id="11-5-1-哈夫曼树的定义和基本概念-p328"><a href="#11-5-1-哈夫曼树的定义和基本概念-p328" class="headerlink" title="11.5.1 哈夫曼树的定义和基本概念 p328"></a>11.5.1 哈夫曼树的定义和基本概念 p328</h4><ul>
+<li>带权路径最小的二叉树被称为哈夫曼数或最优二叉树。</li>
+</ul>
+<h4 id="11-5-2-创建哈夫曼树-p328"><a href="#11-5-2-创建哈夫曼树-p328" class="headerlink" title="11.5.2 创建哈夫曼树 p328"></a>11.5.2 创建哈夫曼树 p328</h4><h4 id="11-5-3-哈夫曼编码-p331"><a href="#11-5-3-哈夫曼编码-p331" class="headerlink" title="11.5.3 哈夫曼编码 p331"></a>11.5.3 哈夫曼编码 p331</h4><h3 id="11-6-排序二叉树-p332"><a href="#11-6-排序二叉树-p332" class="headerlink" title="11.6 排序二叉树 p332"></a>11.6 排序二叉树 p332</h3><ul>
+<li><p>排序二叉树的性质：左子树上所有节点的值均小于它的根节点的值；右子数上所有节点的值均大于它的根节点的值；左右子树也分别为排序二叉树。</p>
+</li>
+<li><p>排序二叉树的代码实现 p335</p>
+</li>
+</ul>
+<h3 id="11-7-红黑树-p340"><a href="#11-7-红黑树-p340" class="headerlink" title="11.7 红黑树 p340"></a>11.7 红黑树 p340</h3></div><div class="tags"><a href="/tags/Java"><i class="fa fa-tag">Java</i></a></div><div class="post-nav"><a class="pre" href="/2016-07-10/Android%E5%BA%94%E7%94%A8%E7%9B%91%E5%90%AC%E5%89%8D%E5%90%8E%E5%8F%B0%E5%88%87%E6%8D%A2%E3%80%81%E7%86%84%E5%B1%8F/">Android应用监听前后台切换、熄屏</a><a class="next" href="/2016-03-29/Android%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88/">Android系统架构概览</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img src="/avatar.jpg"/></a><p>一个平凡的前端开发</p><a class="info-icon" href="https://twitter.com/kinney_yan" title="Twitter" target="_blank" style="margin-inline:5px"> <i class="fa fa-twitter-square" style="margin-inline:5px"></i></a><a class="info-icon" href="mailto:yanshi.ars@gmail.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/kinneyyan" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">7</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 15px;">内网穿透</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 15px;">树莓派</a> <a href="/tags/RSS/" style="font-size: 15px;">RSS</a> <a href="/tags/aria2/" style="font-size: 15px;">aria2</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022-09-27/%E6%88%91%E7%9A%84%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93%EF%BC%882022%EF%BC%89/">我的树莓派使用小结（2022）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-26/%E4%BD%BF%E7%94%A8%20Tiny%20Tiny%20RSS%20%E8%A6%81%E7%82%B9%E5%8F%8A%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">使用 Tiny Tiny RSS 要点及踩坑记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-17/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E6%A0%91%E8%8E%93%E6%B4%BE4B%20+%20KodExplorer%EF%BC%89/">低成本搭建私有云（树莓派4B + KodExplorer）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-11/%20Linux%20%E4%B8%8B%20ZeroTier%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">Linux 下 ZeroTier 的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-10/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E8%80%81%E6%AF%9B%E5%AD%90%20+%20KodExplorer%EF%BC%89/">低成本搭建私有云（老毛子 + KodExplorer）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-04-15/tmux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">tmux 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-04-08/SSH%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">SSH 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-29/find,%20grep%20%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">find, grep 命令速查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-16/git-rebase%20%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8/">git rebase 交互模式的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-07/React%20%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E8%BD%AC/">React 的生命周期(转)</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">Kinney's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ee133de067eb464093931c3a365a2bb5"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body></html>

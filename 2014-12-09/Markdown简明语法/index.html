@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="a personal blog by Kinney Yan"><title>Markdown 简明语法 | Kinney's blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" href="/atom.xml"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Markdown 简明语法</h1><a id="logo" href="/.">Kinney's blog</a><p class="description">stay hungry, stay foolish</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/read/"><i class="fa fa-book"> 读书</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Markdown 简明语法</h1><div class="post-meta">2014-12-09<span> | </span><span class="category"><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="post-content"><blockquote>
+<p>2014.12.18 更新：更换了几个主题，发现有些主题的确会出现部分 md 语法没效果的情况<br>2019.01.08 更新：排版调整，代码块 hexo、表格部分修改</p>
+</blockquote>
+<p>Markdown 是一种极简的『标记语言』，将文本转为 HTML，通常为我大码农所用。其不追求大而全，简洁至上，正所谓不求最贵，只求最好！</p>
+<p>本文介绍 Markdown 基本语法，内容很少，一行语法一行示例，学会后可轻松写出高大上的文档，再也不需要各种编辑器去调文章格式。另外，网上有各平台下的 Markdown 工具可用，也有在线的，我直接使用 sublime 搞定，Markdown 本来就是为了追求简洁，弄个工具岂不多此一举。</p>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>星号与下划线都可以，单是斜体，双是粗体，符号可跨行，符号可加空格。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**一个人来到田纳西**</span></span><br><span class="line"><span class="strong">**毫无疑问**</span></span><br><span class="line"><span class="emphasis">_我做的馅饼</span></span><br><span class="line"><span class="emphasis">是全天下_</span></span><br><span class="line"><span class="emphasis">_最好吃的_</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>一个人来到田纳西</strong><br><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
+<hr>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个或更多-_*，必须单独一行，可含空格。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>符号后的空格可不要。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 引用</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引用</p>
+</blockquote>
+<p>内层符号前的空格必须要</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 引用</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; 引用中的引用</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引用</p>
+<blockquote>
+<blockquote>
+<p>引用中的引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="标题：Setext-方式"><a href="#标题：Setext-方式" class="headerlink" title="标题：Setext 方式"></a>标题：Setext 方式</h2><p>另起一行在文字下方加&#x3D;&#x3D;&#x3D;或---。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 大标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 小标题</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题"></a>大标题</h1><h2 id="小标题"><a href="#小标题" class="headerlink" title="小标题"></a>小标题</h2><hr>
+<h2 id="标题：Atx-方式"><a href="#标题：Atx-方式" class="headerlink" title="标题：Atx 方式"></a>标题：Atx 方式</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>符号之后的空格不能少，-+*效果一样，但不能混合使用，因混合是嵌套列表，内容可超长。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 无序列表</span><br><span class="line"><span class="bullet">-</span> 无序列表</span><br><span class="line"><span class="bullet">-</span> 无序列表</span><br><span class="line"><span class="bullet">-</span> 无序列表：我很长。我也很长！那比一比啊？比就比！我有这么长，你有我长吗？我有这么这么长！好吧，你赢了！</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>无序列表</li>
+<li>无序列表</li>
+<li>无序列表</li>
+<li>无序列表：我很长。我也很长！那比一比啊？比就比！我有这么长，你有我长吗？我有这么这么长！好吧，你赢了！</li>
+</ul>
+<hr>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>数字不能省略但可无序，点号之后的空格不能少。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 有序列表</span><br><span class="line"><span class="bullet">2.</span> 有序列表</span><br><span class="line"><span class="bullet">3.</span> 有序列表</span><br><span class="line"><span class="bullet">4.</span> 有序列表</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<hr>
+<h2 id="嵌套列表"><a href="#嵌套列表" class="headerlink" title="嵌套列表"></a>嵌套列表</h2><p>-+*可循环使用，但符号之后的空格不能少，符号之前的空格也不能少。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 嵌套列表</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 嵌套列表</span><br><span class="line"><span class="bullet">*</span> 嵌套列表</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 嵌套列表</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 嵌套列表</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 嵌套列表</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>嵌套列表<ul>
+<li>嵌套列表</li>
+<li>嵌套列表<ul>
+<li>嵌套列表<ul>
+<li>嵌套列表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>嵌套列表</li>
+</ul>
+<hr>
+<h2 id="文字超链：Inline-方式"><a href="#文字超链：Inline-方式" class="headerlink" title="文字超链：Inline 方式"></a>文字超链：Inline 方式</h2><p>Tooltips 可省略。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">不如</span>](<span class="link">http://bruce-sha.github.io &#x27;不如的博客&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://bruce-sha.github.io/" title="不如的博客">不如</a></p>
+<hr>
+<h2 id="图片超链"><a href="#图片超链" class="headerlink" title="图片超链"></a>图片超链</h2><p>多个感叹号，Tooltips 可省略，要设置大小只能借助 HTML 标记。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">GitHub Mark</span>](<span class="link">http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png &#x27;GitHub Mark&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Mark" title="GitHub Mark"></p>
+<hr>
+<h2 id="索引超链：Reference-方式"><a href="#索引超链：Reference-方式" class="headerlink" title="索引超链：Reference 方式"></a>索引超链：Reference 方式</h2><p>索引 1、2 可以是任意字符。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">不如</span>][<span class="symbol">1</span>]</span><br><span class="line">![<span class="string">GitHub Octocat</span>][<span class="symbol">2</span>]</span><br><span class="line">[<span class="symbol">1</span>]:<span class="link">http://bruce-sha.github.io</span></span><br><span class="line">[<span class="symbol">2</span>]:<span class="link">http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</span></span><br></pre></td></tr></table></figure>
+
+<p>[不如][1]<br>![GitHub Octocat][2]<br>[1]:<a target="_blank" rel="noopener" href="http://bruce-sha.github.io/">http://bruce-sha.github.io</a><br>[2]:<a target="_blank" rel="noopener" href="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</a></p>
+<hr>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>尖括号</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml">&lt;http://ibruce.info&gt;</span></span><br><span class="line"><span class="language-xml">&lt;bu.ru@qq.com&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://ibruce.info/">http://ibruce.info</a><br><a href="mailto:&#98;&#x75;&#46;&#x72;&#117;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#98;&#x75;&#46;&#x72;&#117;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a></p>
+<hr>
+<h2 id="代码：行内代码"><a href="#代码：行内代码" class="headerlink" title="代码：行内代码"></a>代码：行内代码</h2><p>在第一行后指定编程语言，也可以不指定。</p>
+<p>```java<br>String s &#x3D; “hello world”;<br>System.out.println(s);<br>```</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">System.out.println(s);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="代码：段落代码"><a href="#代码：段落代码" class="headerlink" title="代码：段落代码"></a>代码：段落代码</h2><p>每行文字前加 4 个空格或者 1 个 Tab。</p>
+<pre><code>String s = &quot;hello world&quot;;
+System.out.println(s);
+</code></pre>
+<hr>
+<h2 id="代码：hexo"><a href="#代码：hexo" class="headerlink" title="代码：hexo"></a>代码：hexo</h2><p>可指定编程语言、title</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:java Main.java  %&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">System.println(&#x27;Hello World!&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><figcaption><span>Main.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">System.println(<span class="string">&#x27;Hello World!&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>用 html 的注释，好像只有这样？</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--注释--&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>Markdown 中的转义字符为\ ，转义的有：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\\ 反斜杠</span><br><span class="line">\` 反引号 \<span class="emphasis">* 星号</span></span><br><span class="line"><span class="emphasis">\_ 下划线</span></span><br><span class="line"><span class="emphasis">\&#123;\&#125; 大括号</span></span><br><span class="line"><span class="emphasis">\[\] 中括号</span></span><br><span class="line"><span class="emphasis">\(\) 小括号</span></span><br><span class="line"><span class="emphasis">\# 井号</span></span><br><span class="line"><span class="emphasis">\+ 加号</span></span><br><span class="line"><span class="emphasis">\- 减号</span></span><br><span class="line"><span class="emphasis">\. 英文句号</span></span><br><span class="line"><span class="emphasis">\! 感叹号</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>文本中可直接用 html 标签，但是要前后加上空行。</p>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>Markdown 的扩展语法，hexo 不支持。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 姓名 | 年级   | 班级 |</span><br><span class="line">| ---- | ------ | ---- |</span><br><span class="line">| 小明 | 五年级 | 1 班 |</span><br><span class="line">| 小红 | 四年级 | 2 班 |</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年级</th>
+<th>班级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小明</td>
+<td>五年级</td>
+<td>1 班</td>
+</tr>
+<tr>
+<td>小红</td>
+<td>四年级</td>
+<td>2 班</td>
+</tr>
+</tbody></table>
+<p>（完）</p>
+<hr>
+<blockquote>
+<p>参考文章：<a target="_blank" rel="noopener" href="http://ibruce.info/2013/11/26/markdown">http://ibruce.info/2013/11/26/markdown</a></p>
+</blockquote>
+</div><div class="tags"><a href="/tags/markdown"><i class="fa fa-tag">markdown</i></a></div><div class="post-nav"><a class="pre" href="/2014-12-09/%E4%BD%BF%E7%94%A8Github,Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">使用 Github, Hexo 搭建博客</a><a class="next" href="/2014-12-09/%E7%AC%AC%E4%B8%80%E7%AF%87/">第一篇</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img src="/avatar.jpg"/></a><p>一个平凡的前端开发</p><a class="info-icon" href="https://twitter.com/kinney_yan" title="Twitter" target="_blank" style="margin-inline:5px"> <i class="fa fa-twitter-square" style="margin-inline:5px"></i></a><a class="info-icon" href="mailto:yanshi.ars@gmail.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/kinneyyan" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">7</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 15px;">内网穿透</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 15px;">树莓派</a> <a href="/tags/RSS/" style="font-size: 15px;">RSS</a> <a href="/tags/aria2/" style="font-size: 15px;">aria2</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022-09-27/%E6%88%91%E7%9A%84%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93%EF%BC%882022%EF%BC%89/">我的树莓派使用小结（2022）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-26/%E4%BD%BF%E7%94%A8%20Tiny%20Tiny%20RSS%20%E8%A6%81%E7%82%B9%E5%8F%8A%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">使用 Tiny Tiny RSS 要点及踩坑记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-17/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E6%A0%91%E8%8E%93%E6%B4%BE4B%20+%20KodExplorer%EF%BC%89/">低成本搭建私有云（树莓派4B + KodExplorer）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-11/%20Linux%20%E4%B8%8B%20ZeroTier%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">Linux 下 ZeroTier 的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2020-11-10/%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%EF%BC%88%E8%80%81%E6%AF%9B%E5%AD%90%20+%20KodExplorer%EF%BC%89/">低成本搭建私有云（老毛子 + KodExplorer）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-04-15/tmux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">tmux 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-04-08/SSH%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">SSH 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-29/find,%20grep%20%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">find, grep 命令速查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-16/git-rebase%20%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8/">git rebase 交互模式的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019-01-07/React%20%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E8%BD%AC/">React 的生命周期(转)</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">Kinney's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ee133de067eb464093931c3a365a2bb5"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body></html>
